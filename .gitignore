@@ -1,0 +1,11 @@
+node_modules
+build
+build-stack
+data
+.DS_Store
+.env
+.env.backup
+smf-docker.yml
+smf-docker-base.yml
+smf-env.json
+smf-deploy.json
