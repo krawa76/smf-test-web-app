@@ -4,7 +4,34 @@
   "services": {
     "demo": {
       "clients": {}
+    },
+    "back-end": {
+      "ports": {
+        "3010": "3010"
+      },
+      "clients": {
+        "mongodb-mongoose": {},
+        "rabbitmq-amqp": {}
+      }
+    },
+    "front-end": {
+      "ports": {
+        "80": "80"
+      },
+      "clients": {}
+    },
+    "worker": {
+      "clients": {
+        "rabbitmq-amqp": {}
+      }
     }
   },
-  "clients": {}
+  "clients": {
+    "mongodb-mongoose": {
+      "external": false
+    },
+    "rabbitmq-amqp": {
+      "external": false
+    }
+  }
 }
