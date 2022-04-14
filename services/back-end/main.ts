@@ -34,7 +34,10 @@ export default class Main {
       const kittySchema = new mongoose.Schema({
         name: String,
       });
-      const Kitten = mongoose.model('Kitten', kittySchema);
+      interface kitty extends mongoose.Document {
+        name: String 
+  	  }
+      const Kitten = mongoose.model<kitty>('Kitten', kittySchema);
       
       // write to db
       setInterval(async () => {
